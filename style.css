@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.animated-text{
+    /* font-size: 34px; */
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Youtuber";
+    color: #201E43;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #508C9B;
+    border-left: 2px solid #201E43;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Engineer";
+    }
+    21%,40%{
+        content: "Developer";
+    }
+    41%,60%{
+        content: "Programmer";
+    }
+    61%,80%{
+        content: "creator";
+    }
+    81%,100%{
+        content: "Genius";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.maincontent{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+.logo > img{
+    height: 100px;
+}
+
+.cloud1 > img{
+    height: 400px;
+}
+.cloud2 > img{
+    height: 300px;
+}
+.container{
+    width: 70%;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+.cloud1{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.cloud2{
+    grid-area: 2 / 5 / 3 / 6;
+}
+.headig{
+    grid-area: 3 / 1 / 6 / 6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    color: #EEEEEE;
+    padding-bottom: 20px;
+}
+#header{
+    background-color: #508C9B;
+}
+.profile > img{
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.profile{
+    grid-area: 1 / 1 / 2 / 3;
+}
+.block-animation{
+    grid-area: 3 / 1 / 4 / 2;
+}
+.heading1{
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    align-items: center;
+}
+.profile-animation{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.heding-2{
+    grid-area: 3 / 2 / 4 / 4;
+    display: flex;
+    align-items: center;
+}
+.mainheading{
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+#body{
+    padding-top: 20px;
+    height: 500px;
+    background-color: #EEEEEE;
+}
+.desktop > img{
+    height: 430px;
+    width: 280px;
+    object-fit: cover;
+}
+.desktop{
+    grid-area: 1 / 4 / 6 / 6;
+    display: flex;
+    align-items: center;
+}
+#footer{
+    background-color: #201E43;
+    height: 400px;
+    color: #EEEEEE;
+}
+.Contact{
+    grid-area: 2 / 1 / 4 / 3;
+}
+.social{
+    grid-area: 2 / 4 / 3 / 6;
+}
+.social a {
+    padding-right: 20px;
+}
+.Contact > *{
+    padding-top: 10px;
+}
+.copyright{
+    grid-area: 5 / 1 / 6 / 6;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    .cloud2{
+        display: none;
+    }
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .desktop{
+        display: none;
+    }
+    .cloud1{
+        display: flex;
+        justify-content: center;
+        grid-area: 2 / 1 / 3 / 4;
+    }
+    .Contact{
+        padding-left: 20px;
+    }
+    h1{
+        font-size: 40px;
+    }
+}
+
+h1{
+    font-family: "Lilita One", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3{
+    font-family: cursive;
+}
+
